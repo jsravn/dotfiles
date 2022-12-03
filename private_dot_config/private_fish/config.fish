@@ -1,11 +1,12 @@
 if status is-interactive
     # Environment
-    fish_add_path ~/.local/bin
     set -Ux EDITOR nvim
     set -Ux XDG_CACHE_HOME ~/.cache
     set -Ux XDG_CONFIG_HOME ~/.config
     set -Ux XDG_DATA_HOME ~/.local/share
     set -Ux XDG_BIN_HOME ~/.local/bin
+    fish_add_path ~/.local/bin
+    fish_add_path $XDG_CONFIG_HOME/emacs/bin
 
     # Helpers
     scmpuff init -s --shell=fish | source
@@ -14,6 +15,7 @@ if status is-interactive
     alias g="git"
     alias gps="git push"
     alias gc="git commit"
+    alias grm="git rm"
     alias vim="nvim"
     alias rm="rm -i"
     alias cp="cp -i"
