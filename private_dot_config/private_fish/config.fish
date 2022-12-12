@@ -9,7 +9,9 @@ if status is-interactive
     fish_add_path $XDG_CONFIG_HOME/emacs/bin
 
     # Helpers
-    scmpuff init -s --shell=fish | source
+    if type -q scmpuff
+    	scmpuff init -s --shell=fish | source
+    end
 
     # Aliases
     alias g="git"

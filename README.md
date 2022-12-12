@@ -8,6 +8,9 @@ Going for simple and fast to get things done. It uses chezmoi for everything.
 # manual stuff
 
 ```sh
+# setup fish plugins
+curl -sL https://git.io/fisher | source && fisher update
+
 # import gpg key
 keybase login
 keybase pgp export -s | gpg --allow-secret-key-import --import
