@@ -1,0 +1,4 @@
+{{ if ne .chezmoi.os "darwin" }}
+Makefile
+.config/nixpkgs/config.nix
+{{ end }}
