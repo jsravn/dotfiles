@@ -3,7 +3,7 @@
 These are my dotfiles, after I declared technical bankruptcy on my
 [NixOS](https://github.com/jsravn/dotfiles-nixos) configuration.
 
-Going for simple and fast to get things done. It uses chezmoi for everything.
+Going for simple, fast, and lazy to get things done. It uses chezmoi for everything.
 
 # manual stuff
 
@@ -16,7 +16,8 @@ keybase login
 keybase pgp export -s | gpg --allow-secret-key-import --import
 
 # setup vim
-git clone https://github.com/hlissner/.vim ~/.vim; cd ~/.vim; make install
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+nvim
 
 # setup emacs
 git clone git@github.com:jsravn/emacs-config ~/.config/doom
