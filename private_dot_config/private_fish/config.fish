@@ -8,6 +8,9 @@ if status is-interactive
     fish_add_path ~/.local/bin
     fish_add_path $XDG_CONFIG_HOME/emacs/bin
 
+    # homebrew
+    eval (/opt/homebrew/bin/brew shellenv)
+
     # Helpers
     if type -q scmpuff
     	scmpuff init -s --shell=fish | source
