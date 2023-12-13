@@ -136,6 +136,10 @@ chflags nohidden ~/Library
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
 
+# Insta hide / display Dock
+defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock autohide-time-modifier -int 0
+
 # Set the icon size of Dock items
 defaults write com.apple.dock tilesize -int 40
 
