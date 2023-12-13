@@ -137,7 +137,7 @@ chflags nohidden ~/Library
 ###############################################################################
 
 # Set the icon size of Dock items
-defaults write com.apple.dock tilesize -int 30
+defaults write com.apple.dock tilesize -int 40
 
 # Speed up Mission Control animations
 defaults write com.apple.dock expose-animation-duration -float 0.15
@@ -146,7 +146,9 @@ defaults write com.apple.dock expose-animation-duration -float 0.15
 defaults write com.apple.dock showhidden -bool true
 
 # Enable the 'reduce transparency' option. Save GPU cycles.
-defaults write com.apple.universalaccess reduceTransparency -bool true
+if [[ "$RUN_AS_ROOT" = true ]]; then
+	sudo defaults write com.apple.universalaccess reduceTransparency -bool true
+fi
 
 # Hot corners
 # Possible values:
@@ -175,21 +177,23 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 ###############################################################################
 
 # Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
-defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+if [[ "$RUN_AS_ROOT" = true ]]; then
+	sudo defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+fi
 
 ###############################################################################
 # Spotlight                                                                   #
 ###############################################################################
 
-if [[ "$RUN_AS_ROOT" = true ]]; then
-	# Disable Spotlight indexing for any volume that gets mounted and has not yet
-	# been indexed before.
-	# Use `sudo mdutil -i off "/Volumes/foo"` to stop indexing any volume.
-	# sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
+# if [[ "$RUN_AS_ROOT" = true ]]; then
+# Disable Spotlight indexing for any volume that gets mounted and has not yet
+# been indexed before.
+# Use `sudo mdutil -i off "/Volumes/foo"` to stop indexing any volume.
+# sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
 
-	# Restart spotlight
-	# killall mds >/dev/null 2>&1
-fi
+# Restart spotlight
+# killall mds >/dev/null 2>&1
+# fi
 
 ###############################################################################
 # Activity Monitor                                                            #
