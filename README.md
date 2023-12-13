@@ -8,6 +8,9 @@ Going for simple, fast, and lazy to get things done. It uses chezmoi for everyth
 # manual stuff
 
 ```sh
+# setup macbook defaults
+sudo ~/.setup-mac.sh
+
 # setup fish plugins
 curl -sL https://git.io/fisher | source && fisher update
 
