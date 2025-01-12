@@ -13,7 +13,7 @@ if status is-interactive
 
     # Helpers
     if type -q scmpuff
-    	scmpuff init -s --shell=fish | source
+        scmpuff init -s --shell=fish | source
     end
 
     # Aliases
@@ -28,10 +28,10 @@ if status is-interactive
     alias mkdir="mkdir -p"
     alias watch="watch -n05"
     alias q="exit"
-    alias exa="exa --group-directories-first"
-    alias l="exa -1"
-    alias la="exa -la"
-    alias ll="exa -lg"
-    alias ls="exa"
+    alias exa="eza --group-directories-first"
+    alias l="eza -1"
+    alias la="eza -la"
+    alias ll="eza -lg"
+    alias ls="eza"
     alias ppjson="stdbuf -oL jq -rC '.'  | sed 's/\\n/\n/g; s/\\t/\t/g'"
 end
