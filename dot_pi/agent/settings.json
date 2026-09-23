@@ -1,0 +1,11 @@
+{
+  "lastChangelogVersion": "0.87.1",
+  "theme": "dark",
+  "packages": [
+    "npm:pi-web-access",
+    "npm:pi-fabric"
+  ],
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-6-astra",
+  "defaultThinkingLevel": "xhigh"
+}
