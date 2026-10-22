@@ -1,5 +1,9 @@
 # Working preferences
 
+## Shell
+
+- I use fish shell. Any shell commands given to me must use fish-compatible syntax.
+
 ## Models
 
 - Main agent: `openai-codex/gpt-6-astra` with `xhigh` thinking.
