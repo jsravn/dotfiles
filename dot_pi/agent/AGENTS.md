@@ -6,8 +6,6 @@
 
 ## Models
 
-- Main agent: `openai-codex/gpt-6-astra` with `xhigh` thinking.
-  Keep this profile unless I request a change; don't proactively suggest switches.
 - Choose subagent models by task, using these starting points:
   - `openai-codex/gpt-6-luna` / `low`: bounded lookups and mechanical work.
   - `openai-codex/gpt-6-sol` / `medium`: routine implementation and testing.
